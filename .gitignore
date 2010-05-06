@@ -1,0 +1,4 @@
+.*
+!.gitignore
+Pod-Weaver-PluginBundle-FLORA-*
+Debian_CPANTS.txt
