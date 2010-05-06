@@ -10,6 +10,58 @@ sub _exp { Pod::Weaver::Config::Assembler->expand_package($_[0]) }
 
 use namespace::clean;
 
+=head1 SYNOPSIS
+
+In weaver.ini:
+
+  [@FLORA]
+
+or in dist.ini:
+
+  [PodWeaver]
+  config_plugin = @FLORA
+
+=head1 OVERVIEW
+
+This plugin bundle is equivalent to the following weaver.ini file:
+
+  [@CorePrep]
+
+  [Name]
+
+  [Region / prelude]
+
+  [Generic / SYNOPSIS]
+  [Generic / DESCRIPTION]
+  [Generic / OVERVIEW]
+
+  [Collect / ATTRIBUTES]
+  command = attr
+
+  [Collect / METHODS]
+  command = method
+
+  [Collect / FUNCTIONS]
+  command = func
+
+  [Leftovers]
+
+  [Region / postlude]
+
+  [Authors]
+  [Legal]
+
+  [-Transformer]
+  transformer = List
+
+=begin Pod::Coverage
+
+mvp_bundle_config
+
+=end Pod::Coverage
+
+=cut
+
 sub mvp_bundle_config {
     return (
         [ '@FLORA/CorePrep',  _exp('@CorePrep'),    {} ],
