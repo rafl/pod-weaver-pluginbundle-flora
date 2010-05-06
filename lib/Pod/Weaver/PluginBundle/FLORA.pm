@@ -10,6 +10,11 @@ sub _exp { Pod::Weaver::Config::Assembler->expand_package($_[0]) }
 
 use namespace::clean;
 
+=head1 DESCRIPTION
+
+This is the L<Pod::Weaver> config I use for building my
+documentation. I use it via L<Dist::Zilla::PluginBundle::FLORA>.
+
 =head1 SYNOPSIS
 
 In weaver.ini:
