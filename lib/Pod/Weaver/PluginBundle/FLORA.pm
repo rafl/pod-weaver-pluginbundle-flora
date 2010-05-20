@@ -72,7 +72,7 @@ sub mvp_bundle_config {
         [ '@FLORA/CorePrep',  _exp('@CorePrep'),    {} ],
         [ '@FLORA/Name',      _exp('Name'),         {} ],
         [ '@FLORA/prelude',   _exp('Region'),       { region_name => 'prelude' } ],
-        
+
         [ 'SYNOPSIS',         _exp('Generic'),      {} ],
         [ 'DESCRIPTION',      _exp('Generic'),      {} ],
         [ 'OVERVIEW',         _exp('Generic'),      {} ],
@@ -80,6 +80,7 @@ sub mvp_bundle_config {
         [ 'ATTRIBUTES',       _exp('Collect'),      { command => 'attr'   } ],
         [ 'METHODS',          _exp('Collect'),      { command => 'method' } ],
         [ 'FUNCTIONS',        _exp('Collect'),      { command => 'func'   } ],
+        [ 'TYPES',            _exp('Collect'),      { command => 'type'   } ],
 
         [ '@FLORA/Leftovers', _exp('Leftovers'),    {} ],
 
