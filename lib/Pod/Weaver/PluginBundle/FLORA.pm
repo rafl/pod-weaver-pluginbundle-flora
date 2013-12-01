@@ -62,7 +62,7 @@ This plugin bundle is equivalent to the following weaver.ini file:
   [-Transformer]
   transformer = List
 
-  [-Encoding]
+  [-SingleEncoding]
 
 =begin Pod::Coverage
 
@@ -95,7 +95,8 @@ sub mvp_bundle_config {
         [ '@FLORA/Legal',     _exp('Legal'),        {} ],
 
         [ '@FLORA/List',      _exp('-Transformer'), { transformer => 'List' } ],
-        [ '@FLORA/Encoding',  _exp('-Encoding'),    {} ],
+
+        [ '@FLORA/SingleEncoding', _exp('-SingleEncoding'), {} ],
     );
 }
 
